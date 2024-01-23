@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliment Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Compliment Generator</h1>
+    <p id="compliment">Click the button to generate a compliment!</p>
+    <button onclick="generateCompliment()">Generate Compliment</button>
+
+    <script>
+        const compliments = [
+            "You're amazing!",
+            "You're doing great!",
+            "You're fantastic!",
+            "You're awesome!",
+            "You're incredible!",
+            "You're outstanding!",
+            "You're exceptional!",
+            "You're extraordinary!",
+            "You're fantastic!",
+            "You're a star!",
+        ];
+
+        function generateCompliment() {
+            const randomIndex = Math.floor(Math.random() * compliments.length);
+            const compliment = compliments[randomIndex];
+            document.getElementById("compliment").innerText = compliment;
+        }
+    </script>
+
+</body>
+</html>
